@@ -1,4 +1,4 @@
-FROM maven:3.8.1-jdk-8-slim as build
+FROM maven:3.8.4-jdk-8-slim as build
 
 # 指定构建过程中的工作目录
 WORKDIR /app
@@ -7,7 +7,7 @@ WORKDIR /app
 COPY src /app/src
 
 # 将pom.xml文件，拷贝到工作目录下
-COPY pom.xml /app/
+COPY settings.xml pom.xml /app/
 
 # 执行代码编译命令
 # 自定义settings.xml, 选用国内镜像源以提高下载速度
