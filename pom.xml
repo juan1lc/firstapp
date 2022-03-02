@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.bstest</groupId>
-    <artifactId>news-app</artifactId>
+    <artifactId>newsbs</artifactId>
     <version>0.0.1</version>
     <name>newsbs</name>
     <description>newsbs</description>
