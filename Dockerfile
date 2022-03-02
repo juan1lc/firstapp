@@ -30,10 +30,10 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tencent.com/g' /etc/apk/repositorie
 WORKDIR /app
 
 # 将构建产物jar包拷贝到运行时目录中
-COPY --from=build /app/target/newsbs-0.0.1.jar .
+COPY --from=build /app/target/news-app-0.0.1.jar .
 
 # 暴露端口
 EXPOSE 80
 
 # 执行启动命令
-CMD ["java", "-jar", "/app/newsbs-0.0.1.jar"]
+CMD ["java", "-jar", "/app/newsbs-app-0.0.1.jar"]
