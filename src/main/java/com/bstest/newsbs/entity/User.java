@@ -1,78 +1,31 @@
 package com.bstest.newsbs.entity;
 
-public class User {
-    private int userId;
+import com.bstest.newsbs.enums.Gender;
+import lombok.Data;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import java.util.Date;
+
+@Entity
+@Data
+public class User extends AbstractEntity{
+
+    private String username;
+
     private String password;
-    private String uerName;
-    private String city;
-    private String phone;
-    private String mail;
-    private String userPhoto;
-    private String userType;
 
-    public int getUserId() {
-        return userId;
-    }
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
+    private String nickname;
 
-    public String getPassword() {
-        return password;
-    }
+    private Boolean locked;
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    private Boolean enabled;
 
-    public String getUerName() {
-        return uerName;
-    }
+    private String lastLoginip;
 
-    public void setUerName(String uerName) {
-        this.uerName = uerName;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
-    }
-
-    public String getUserPhoto() {
-        return userPhoto;
-    }
-
-    public void setUserPhoto(String userPhoto) {
-        this.userPhoto = userPhoto;
-    }
-
-    public String getUserType() {
-        return userType;
-    }
-
-    public void setUserType(String userType) {
-        this.userType = userType;
-    }
-
-
+    private Date lastLoginTime;
 }
